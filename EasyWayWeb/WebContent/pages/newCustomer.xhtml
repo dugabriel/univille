@@ -1,0 +1,62 @@
+<ui:composition template="/pages/home2.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"  >
+
+	<ui:define name="title">Welcome</ui:define>
+	
+	<ui:define name="content">
+		<section class="content-header">
+           <h1>
+            Cadastro de Cliente
+            <small>novo!</small>
+          </h1>
+          <ol class="breadcrumb">
+            <li><a href="/EasyWayWeb/"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active">Cadastro Cliente</li>
+          </ol>
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+		
+		<div class="row">
+            <!-- left column -->
+            <div class="col-md-12">
+              <!-- general form elements -->
+              <div class="box box-primary">
+                <!-- form start -->
+                 <h:form id="formCustomerNew">
+                  <div class="box-body">
+                    <div class="form-group">
+                      <label for="nameCustomer">Nome/Razão Social</label>
+                      <h:inputText id="nameCustomer" styleClass="form-control" value="#{controlCustomer.model.nameCustomer}"></h:inputText>
+                    </div>
+                    <div class="form-group">
+                      <label for="nameCustomer">E-mail</label>
+                       <h:inputText id="emailCustomer" styleClass="form-control" value="#{controlCustomer.model.emailCustomer}"></h:inputText>
+                    </div>
+                    <div class="form-group">
+                      <label for="nameCustomer">CPF/CNPJ</label>
+                      <h:inputText id="CNPJCustomer" styleClass="form-control" value="#{controlCustomer.model.CNPJ}"></h:inputText>
+                    </div>
+                    <div class="form-group">
+                      <label for="nameCustomer">Endereço</label>
+                       <h:inputText id="adressCustomer" styleClass="form-control" value="#{controlCustomer.model.addressCustomer}"></h:inputText>
+                    </div>
+                  </div><!-- /.box-body -->
+                  <div class="box-footer">
+                    <h:commandButton value="Cadastrar" action="#{controlCustomer.save}" styleClass="btn btn-primary"/>
+                  </div>
+               </h:form>
+              </div><!-- /.box -->
+          </div>
+        </div>
+
+        </section><!-- /.content -->
+		
+	</ui:define>
+	
+</ui:composition>

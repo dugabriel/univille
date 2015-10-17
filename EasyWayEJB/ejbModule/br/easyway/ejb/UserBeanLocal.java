@@ -1,0 +1,8 @@
+package br.easyway.ejb;
+
+import javax.ejb.Local;
+
+@Local
+public interface UserBeanLocal {
+
+}

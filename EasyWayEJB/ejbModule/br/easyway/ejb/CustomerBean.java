@@ -29,11 +29,7 @@ public class CustomerBean implements CustomerBeanLocal {
 	}
 	
 	public void saveCustomer(Customer customer){
-		if(em.find(Customer.class, customer.getIdCustomer()) == null){
-			em.persist(customer);
-		}else{
-			em.merge(customer);
-		}
+
 	}
 	
 	public void deleteCustomer(Customer customer){
@@ -47,7 +43,10 @@ public class CustomerBean implements CustomerBeanLocal {
 
 	@Override
 	public void save(Customer model) {
-		// TODO Auto-generated method stub
-		
+		if(em.find(Customer.class, model.getIdCustomer()) == null){
+			em.persist(model);
+		}else{
+			em.merge(model);
+		}
 	}
 }

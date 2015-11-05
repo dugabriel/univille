@@ -22,5 +22,7 @@ public class UserBean implements UserBeanLocal {
     public UserBean() {
         // TODO Auto-generated constructor stub
     }
+    
+    
 
 }

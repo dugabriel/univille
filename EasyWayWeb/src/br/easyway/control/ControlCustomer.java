@@ -28,12 +28,14 @@ public class ControlCustomer {
 	}
 		
 	public void createNewCustomer(){
+		System.out.println("#Create new");
 		model = new Customer();
 	}
 	
 	public void save(){
 		System.out.println("#Novo cliente...");		
 		customerBean.save(model);
+		createNewCustomer();
 	}
 	
 	public Customer getModel(){
@@ -46,7 +48,7 @@ public class ControlCustomer {
 	
 	@PostConstruct
 	public void init(){
-		System.out.println("#LOAD PAGE CUSTOMER");
+		System.out.println("#LO AD CUSTOMER");
 		createNewCustomer();
 	}
 	

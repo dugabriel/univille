@@ -1,0 +1,19 @@
+package br.easyway.model;
+
+public class Reports {
+	private int idReport;
+	private String descReport;
+	public int getIdReport() {
+		return idReport;
+	}
+	public void setIdReport(int idReport) {
+		this.idReport = idReport;
+	}
+	public String getDescReport() {
+		return descReport;
+	}
+	public void setDescReport(String descReport) {
+		this.descReport = descReport;
+	}
+
+}

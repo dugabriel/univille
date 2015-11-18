@@ -1,0 +1,22 @@
+package br.easyway.model;
+
+public class PermissionUser {
+	private int idPermission;
+	private String descPermission;
+	
+	public int getIdPermission() {
+		return idPermission;
+	}
+	public void setIdPermission(int idPermission) {
+		this.idPermission = idPermission;
+	}
+	public String getDescPermission() {
+		return descPermission;
+	}
+	public void setDescPermission(String descPermission) {
+		this.descPermission = descPermission;
+	}
+	
+	
+
+}

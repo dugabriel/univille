@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence>
+    <!--Nome do contexto que configura o Provedor de Persistência -->
+    <persistence-unit name="easywayDS">
+    	<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <jta-data-source>jdbc/ewDS</jta-data-source>
+        <properties>
+            <property name="eclipselink.ddl-generation" value="create-tables"/>
+			<property name="eclipselink.ddl-generation.output-mode" value="database" />
+        </properties>      
+    </persistence-unit>
+</persistence>
+
+
+

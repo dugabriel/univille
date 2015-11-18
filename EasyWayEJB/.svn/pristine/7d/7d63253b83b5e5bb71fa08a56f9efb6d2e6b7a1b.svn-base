@@ -1,0 +1,41 @@
+package br.easyway.model;
+
+public class User {
+	private int idUser;
+	private int CPF;
+	private String login;
+	private String password;
+	private String nameUser;
+
+	public int getIdUser() {
+		return idUser;
+	}
+	public void setIdUser(int idUser) {
+		this.idUser = idUser;
+	}
+	public int getCPF() {
+		return CPF;
+	}
+	public void setCPF(int cPF) {
+		CPF = cPF;
+	}
+	public String getLogin() {
+		return login;
+	}
+	public void setLogin(String login) {
+		this.login = login;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public String getNameUser() {
+		return nameUser;
+	}
+	public void setNameUser(String nameUser) {
+		this.nameUser = nameUser;
+	}
+
+}

@@ -1,0 +1,34 @@
+package br.easyway.model;
+
+public class Project {
+	private int idProject;
+	private String descProject;
+	private String hourProject;
+	private Boolean active;
+	
+	public int getIdProject() {
+		return idProject;
+	}
+	public void setIdProject(int idProject) {
+		this.idProject = idProject;
+	}
+	public String getDescProject() {
+		return descProject;
+	}
+	public void setDescProject(String descProject) {
+		this.descProject = descProject;
+	}
+	public String getHourProject() {
+		return hourProject;
+	}
+	public void setHourProject(String hourProject) {
+		this.hourProject = hourProject;
+	}
+	public Boolean getActive() {
+		return active;
+	}
+	public void setActive(Boolean active) {
+		this.active = active;
+	}
+
+}

@@ -1,0 +1,5 @@
+package br.easyway.model;
+
+public class Resource {
+	
+}

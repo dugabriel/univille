@@ -1,0 +1,9 @@
+package br.easyway.model;
+
+public class Project {
+	private int idProject;
+	private String descProject;
+	private String hourProject;
+	private Boolean active;
+
+}

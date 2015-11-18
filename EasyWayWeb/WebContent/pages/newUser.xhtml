@@ -1,0 +1,66 @@
+<ui:composition template="/pages/home.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"  >
+
+	<ui:define name="title">Novo usuário</ui:define>
+	
+	<ui:define name="content">
+		<section class="content-header">
+           <h1>
+            Cadastro de Usuário
+            <small>novo!</small>
+          </h1>
+          <ol class="breadcrumb">
+            <li><a href="/EasyWayWeb/"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active">Cadastro Usuário</li>
+          </ol>
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+		
+		<div class="row">
+            <!-- left column -->
+            <div class="col-md-12">
+              <!-- general form elements -->
+              <div class="box box-primary">
+                <!-- form start -->
+                 <h:form id="formUserNew">
+                  <div class="box-body">
+                    <div class="form-group">
+                      <label for="cpfUser">CPF</label>
+                      <h:inputText id="cpfUser" styleClass="form-control" value="#{controlUser.model.CPF}"></h:inputText>
+                    </div>
+                    <div class="form-group">
+                      <label for="loginUser">Login</label>
+                       <h:inputText id="loginUser" styleClass="form-control" value="#{controlUser.model.login}"></h:inputText>
+                    </div>
+                    <div class="form-group">
+                      <label for="nameUser">Nome</label>
+                      <h:inputText id="nameUser" styleClass="form-control" value="#{controlUser.model.nameUser}"></h:inputText>
+                    </div>
+                    <div class="form-group">
+                      <label for="emailUser">E-mail</label>
+                       <h:inputText id="emailUser" styleClass="form-control" value="#{controlUser.model.email}"></h:inputText>
+                    </div>
+                     <div class="form-group">
+                      <label for="pwdUser">Senha</label>
+                       <h:inputText id="pwdUser" styleClass="form-control" value="#{controlUser.model.password}"></h:inputText>
+                    </div>
+                  </div><!-- /.box-body -->
+                  <div class="box-footer">
+                    <h:commandButton value="Cadastrar" action="#{controlUser.save}" styleClass="btn btn-primary"/>
+                  </div>
+               </h:form>
+              </div><!-- /.box -->
+          </div>
+        </div>
+
+        </section><!-- /.content -->
+		
+	</ui:define>
+	
+</ui:composition>

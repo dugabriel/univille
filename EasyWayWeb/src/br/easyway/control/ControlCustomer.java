@@ -1,6 +1,8 @@
 package br.easyway.control;
 
 
+import java.util.List;
+
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
@@ -44,6 +46,10 @@ public class ControlCustomer {
 	
 	public void setModel(Customer model) {
 		this.model = model;
+	}
+	
+	public List<Customer> getAllCustomer(){
+		return customerBean.getAllCustomer();
 	}
 	
 	@PostConstruct

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+ 
+    <h:head>
+        <f:facet name="first">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />	
+            <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'/>	
+            <title><ui:insert name="title"/></title>
+            <base href="#{request.requestURL.substring(0, request.requestURL.length() - request.requestURI.length())}#{request.contextPath}/" />
+        </f:facet>
+        <f:facet name="middle">
+        	<!-- styles -->
+        	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+		    <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" /> 
+            <h:outputStylesheet name="bootstrap/css/bootstrap.css" />
+            <h:outputStylesheet name="css/AdminLTE.css"/>
+            <h:outputStylesheet name="css/skin-black.css"/>
+            <h:outputStylesheet name="css/datatable.css"/>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" />
+            <h:outputScript name="bootstrap/js/bootstrap.js" />
+            <h:outputScript name="js/app.js" />
+            <h:outputScript name="js/datatable.js" />
+            <h:outputScript name="js/custom.js" />
+        </f:facet>
+        <f:facet name="last">
+ 
+        </f:facet>
+    </h:head>
+    <h:body class="login-page">
+	 <div class="login-box">
+      <div class="login-logo">
+        <a href="pages/welcome.xhtml"><b>EasyWay</b>WEB</a>
+      </div><!-- /.login-logo -->
+      <div class="login-box-body">
+        <p class="login-box-msg">Insira o e-mail e senha para iniciar sua sessão</p>
+         <h:form id="formLogin">
+          <div class="form-group has-feedback">
+            <h:inputText id="userLogin" styleClass="form-control" value="#{controlLogin.model.login}"/>
+            <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+          </div>
+          <div class="form-group has-feedback">
+            <h:inputSecret id="userPWD" styleClass="form-control" value="#{controlLogin.model.password}"/>
+            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+          </div>
+          <div class="row">
+            <div class="col-xs-8">    
+              <div class="checkbox icheck">
+            
+              </div>                        
+            </div><!-- /.col -->
+            <div class="col-xs-4">
+              <h:commandButton value="Login" action="#{controlLogin.validateLogin}" styleClass="btn btn-primary btn-block btn-flat"/>
+            </div><!-- /.col -->
+          </div>
+        </h:form>
+
+      </div><!-- /.login-box-body -->
+    </div><!-- /.login-box -->
+
+	
+    </h:body>
+</html>

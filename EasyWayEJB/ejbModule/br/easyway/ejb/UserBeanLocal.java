@@ -8,11 +8,15 @@ import br.easyway.entity.User;
 
 @Local
 public interface UserBeanLocal {
-	
-	 public List<User> getAllUsers();
-	 
-	 public void saveUser(User model);
-	 
-	 public void deleteCustomer(User user);
+
+	public List<User> getAllUsers();
+
+	public void saveUser(User model);
+
+	public void deleteCustomer(User user);
+
+	public void createAdmin();
+
+	public User validateUser(String login, String pwd);
 
 }

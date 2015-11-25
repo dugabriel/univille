@@ -9,7 +9,9 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 
 @NamedQueries({
-	@NamedQuery(name="allUsers", query="Select u from SystemUser u")
+	@NamedQuery(name="allUsers", query="Select u from SystemUser u"),
+	@NamedQuery(name="authUser", query="Select u from SystemUser u where u.login = :login and u.password = :pwd"),
+	@NamedQuery(name="findUserAdmin", query="Select u from SystemUser u where u.login = 'admin'"),
 })
 
 

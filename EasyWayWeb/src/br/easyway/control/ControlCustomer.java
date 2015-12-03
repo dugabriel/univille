@@ -15,6 +15,7 @@ import br.easyway.entity.Customer;
 @ManagedBean(name="controlCustomer")
 @ViewScoped
 public class ControlCustomer {
+	
 	@EJB
 	private CustomerBeanLocal customerBean;
 	

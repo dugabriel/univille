@@ -1,12 +1,8 @@
 $( document ).ready(function() {
-	bindLinks();
+	//bindLinks();
 });
 
-
-function bindLinks(){
-	console.log("click customer");
-	$("#customer").click(function(){
-   
-	});
+function showAlertMessage(msg){
+	bootbox.alert(msg);
 }
 

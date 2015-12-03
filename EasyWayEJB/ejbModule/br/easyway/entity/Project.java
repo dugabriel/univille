@@ -10,6 +10,14 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+
+@NamedQueries({
+	@NamedQuery(name="allProjects", query="Select p from Project p"),
+})
+
+
 
 @Entity
 public class Project {

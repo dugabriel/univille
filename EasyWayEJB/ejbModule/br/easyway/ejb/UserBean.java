@@ -58,7 +58,7 @@ public class UserBean implements UserBeanLocal {
 		try{
 			Query q = em.createNamedQuery("authUser");
 			q.setParameter("login", login);
-			q.setParameter("senha", pwd);
+			q.setParameter("pwd", pwd);
 			q.setMaxResults(1);
 			return (User)q.getSingleResult();
 		}catch (NoResultException e){

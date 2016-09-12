@@ -9,7 +9,7 @@ import br.univille.sort.ShakerSort;
 
 public class Main {
 	private final static int SAMPLES = 2;
-	private final static int[] RESULTFILES = ReadFile.getFileNumbers("ELEMENTOS_REPETIDOS_100000.txt");
+	private final static int[] RESULTFILES = ReadFile.getFileNumbers("ELEMENTOS_REPETIDOS_10000.txt");
 
 	public static void main(String[] args) {
 		
@@ -50,8 +50,7 @@ public class Main {
 		QuickSort quick= new QuickSort();
 		
 		for(int i = 0; i < SAMPLES;i++){
-			int[] tempArray = RESULTFILES.clone();
-			long temp = quick.quickSort(tempArray,0,tempArray.length-1);
+			long temp = quick.quickSort(RESULTFILES.clone(),0,RESULTFILES.length-1);
 			System.out.println("Quick Sort: " + temp);
 		}
 		

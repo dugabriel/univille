@@ -12,7 +12,7 @@ public class BubbleSort {
 		int aux = 0;
 		int i = 0;
 		
-		long start = System.currentTimeMillis();
+		long start = System.nanoTime();
 		for(i = 0; i<vet.length; i++){
 			for(int j = 0; j<vet.length-1; j++){
 				if(vet[j] > vet[j + 1]){
@@ -22,7 +22,7 @@ public class BubbleSort {
 				}
 			}
 		}
-		long end = System.currentTimeMillis();
+		long end = System.nanoTime();
 		return end-start;
 	}
 

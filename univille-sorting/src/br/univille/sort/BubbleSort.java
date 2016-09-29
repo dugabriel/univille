@@ -13,6 +13,8 @@ public class BubbleSort {
 			vet[i] = v[i];
 		}
 		
+		
+		System.out.println("go bubble");
 		long start = System.nanoTime();
 		for(i = 0; i<vet.length; i++){
 			for(j = 0; j<vet.length-1; j++){

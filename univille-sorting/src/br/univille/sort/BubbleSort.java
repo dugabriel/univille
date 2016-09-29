@@ -2,19 +2,20 @@ package br.univille.sort;
 
 
 public class BubbleSort {
-	private static int[] sorted;
 
-	public int[] getSorted() {
-		return sorted;
-	}
-
-	public long bubbleSort(int[] vet){
+	public long bubbleSort(int[] v){
 		int aux = 0;
 		int i = 0;
+		int j = 0;
+		int[] vet = new int[v.length];
+		
+		for(i =0;i < vet.length;i++){
+			vet[i] = v[i];
+		}
 		
 		long start = System.nanoTime();
 		for(i = 0; i<vet.length; i++){
-			for(int j = 0; j<vet.length-1; j++){
+			for(j = 0; j<vet.length-1; j++){
 				if(vet[j] > vet[j + 1]){
 					aux = vet[j];
 					vet[j] = vet[j+1];

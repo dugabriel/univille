@@ -8,23 +8,29 @@ import br.univille.sort.QuickSort;
 import br.univille.sort.ShakerSort;
 
 public class Main {
-	private final static int SAMPLES = 2;
-	private final static int[] RESULTFILES = ReadFile.getFileNumbers("ELEMENTOS_REPETIDOS_10000.txt");
+	private final static int SAMPLES = 100;
+	private final static int[] RESULTFILES = ReadFile.getFileNumbers("ALEATORIO_1000.txt");
 
 	public static void main(String[] args) {
 		
 		/*
 		 * BubleSort 
+		 * 
 		 */
 		BubbleSort bubble = new BubbleSort();
+		long media = 0;
 		for(int i = 0; i < SAMPLES;i++){
-			long temp = bubble.bubbleSort(RESULTFILES.clone());
-			System.out.println("BubleSort: " + temp);
+			long temp = bubble.bubbleSort(RESULTFILES);
+			media =+ temp;
+			//System.out.println("BubleSort: " + temp);
 		}
 		
+		System.out.println("media: "+ media/SAMPLES);
+		
 		/*
+		
 		 * Insertion Sort
-		 */
+		 
 		InsertionSort insert = new InsertionSort();
 		
 		for(int i = 0; i < SAMPLES;i++){
@@ -33,9 +39,9 @@ public class Main {
 		
 		}
 		
-		/*
+		
 		 * Shaker Sort
-		 */
+		 
 		ShakerSort shaker = new ShakerSort();
 		
 		for(int i = 0; i < SAMPLES;i++){
@@ -44,15 +50,15 @@ public class Main {
 		}
 		
 		
-		/*
+		
 		 * Quick Sort
-		 */
+		 
 		QuickSort quick= new QuickSort();
 		
 		for(int i = 0; i < SAMPLES;i++){
 			long temp = quick.quickSort(RESULTFILES.clone(),0,RESULTFILES.length-1);
 			System.out.println("Quick Sort: " + temp);
-		}
+		}*/
 		
 	}
 

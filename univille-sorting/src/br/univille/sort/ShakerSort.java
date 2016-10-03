@@ -8,7 +8,8 @@ public class ShakerSort {
 		int fim = vetor.length - 1;
 		swap = 0;
 		
-		long start = System.nanoTime();
+		//long start = System.nanoTime();
+		long start = System.currentTimeMillis();
 		while (swap == 0 && inicio < fim){
 			swap = 1;
 			for (int i = inicio; i < fim; i = i + 1){
@@ -30,7 +31,7 @@ public class ShakerSort {
 			}
 			inicio = inicio + 1;
 		}
-		long end = System.nanoTime();
+		long end = System.currentTimeMillis();
 		return end-start;
 	}
 

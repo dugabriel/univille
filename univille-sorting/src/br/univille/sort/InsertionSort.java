@@ -12,7 +12,8 @@ public class InsertionSort {
 		int key;             
 		int i;  
 
-		long start = System.nanoTime();
+		//long start = System.nanoTime();
+		long start = System.currentTimeMillis();
 		for (j = 1; j < num.length; j++){
 			key = num[ j ];
 			for(i = j - 1; (i >= 0) && (num[ i ] < key); i--){
@@ -21,7 +22,7 @@ public class InsertionSort {
 			num[ i+1 ] = key;
 		}
 		sorted = num;
-		long end = System.nanoTime();
+		long end = System.currentTimeMillis();
 		return end-start;
 	}
 

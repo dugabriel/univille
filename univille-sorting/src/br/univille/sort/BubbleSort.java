@@ -14,8 +14,9 @@ public class BubbleSort {
 		}
 		
 		
-		System.out.println("go bubble");
-		long start = System.nanoTime();
+		//System.out.println("go bubble");
+		//long start = System.nanoTime();
+		long start = System.currentTimeMillis();
 		for(i = 0; i<vet.length; i++){
 			for(j = 0; j<vet.length-1; j++){
 				if(vet[j] > vet[j + 1]){
@@ -25,7 +26,7 @@ public class BubbleSort {
 				}
 			}
 		}
-		long end = System.nanoTime();
+		long end = System.currentTimeMillis();
 		return end-start;
 	}
 

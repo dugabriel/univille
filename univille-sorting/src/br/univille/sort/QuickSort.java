@@ -24,14 +24,15 @@ public class QuickSort {
 	}
 	 
 	public long quickSort(int arr[], int left, int right){
-		  long start = System.nanoTime();
+		  //long start = System.nanoTime();
+		  long start = System.currentTimeMillis();
 	      int index = partition(arr, left, right);
 	      if (left < index - 1)
 	            quickSort(arr, left, index - 1);
 	      if (index < right)
 	            quickSort(arr, index, right);
 	      
-	      long end = System.nanoTime();
+	      long end = System.currentTimeMillis();
 	      return end -start;
 	}
 }

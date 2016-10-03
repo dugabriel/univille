@@ -9,7 +9,7 @@ import br.univille.sort.ShakerSort;
 import br.univille.statistic.Deviation;
 
 public class Main {
-	private final static int SAMPLES = 100;
+	private final static int SAMPLES = 30;
 	private final static int[] RESULTFILES = ReadFile.getFileNumbers("REVERSO_100000.txt");
 
 	public static void main(String[] args) {
@@ -25,7 +25,7 @@ public class Main {
 		long[] media = new long[SAMPLES];
 		for(int i = 0; i < SAMPLES;i++){
 			media[i] = bubble.bubbleSort(RESULTFILES);
-			//System.out.println("BubleSort: " + media[i]);
+			System.out.println("BubleSort: " + media[i]);
 		}
 		long mean = Deviation.findMean(media);
 		System.out.println("media: "+ mean);
@@ -43,7 +43,7 @@ public class Main {
 		long[] mediaInsert = new long[SAMPLES];
 		for(int i = 0; i < SAMPLES;i++){
 			mediaInsert[i] = insert.insertionSort(RESULTFILES.clone());
-			//System.out.println("Insertion Sort: " + temp);
+			System.out.println("Insertion Sort: " + mediaInsert[i]);
 		}
 		long meanSort = Deviation.findMean(mediaInsert);
 		System.out.println("media: "+ meanSort);
@@ -63,7 +63,7 @@ public class Main {
 		long[] mediaShaker = new long[SAMPLES];
 		for(int i = 0; i < SAMPLES;i++){
 			mediaShaker[i] = shaker.shakerSort(RESULTFILES.clone());
-			//System.out.println("Shaker Sort: " + temp);
+			System.out.println("Shaker Sort: " + mediaShaker[i]);
 		}
 		long meanShaker = Deviation.findMean(mediaShaker);
 		System.out.println("media: "+ meanShaker);
@@ -79,7 +79,7 @@ public class Main {
 		long[] mediaQuick = new long[SAMPLES];
 		for(int i = 0; i < SAMPLES;i++){
 			mediaQuick[i] = quick.quickSort(RESULTFILES.clone(),0,RESULTFILES.length-1);
-			//System.out.println("Quick Sort: " + temp);
+			System.out.println("Quick Sort: " + mediaQuick[i]);
 		}
 		long meanQuick= Deviation.findMean(mediaQuick);
 		System.out.println("media: "+ meanQuick);
